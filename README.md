@@ -2,24 +2,24 @@
 
 # Iguanara App
 
-# Conhecendo o produto
-Visando o crescimento exponencial dos desenvolvedores no brasil, cheguei a conclusão que muitos dos desenvolvedores iniciantes / estudantes não possuem um portfólio ou um curriculum web onde possam demonstrar suas informações de forma assertiva ao seu público e recrutadores, diante disso surgiu o Iguanara, uma aplicação que reune informações através das api's do GitHub e Linkedin e centralizam essas informações de forma automatizada com alguns cliques.
+# Knowing the product
+Aiming at the exponential growth of developers in Brazil, we came to the conclusion that many beginner/student developers do not have a portfolio or a web resume where they can assertively demonstrate their information to their audience and recruiters. Iguanara soon emerged, an application that gathers information through GitHub and Linkedin APIs and centralizes this information in an automated way with a few clicks.
 
-# Ferramentas Utilizadas
-Seguindo pelo ponto de facilidade e simplicidade, essa projeto se apoia em dependencias simples como o Firebase para utilização do Firestore como o banco NoSql da aplicação, junto ao Firebase Auth para reunir informações de login do GitHub e Linkedin.
+# Tools Used
+Following the point of ease and simplicity, this project relies on simple dependencies such as Firebase to use Firestore as the application's NoSql database, along with Firebase Auth to gather login information from GitHub and Linkedin.
 
-Com esse ambiente, a aplicação fica segura em relação aos dados e tambem mantem uma melhor manutenção e custo visando estar em um ambiente cloud que não depende de um local fisico rodando a api ou aplicação.
+With this environment, the application is secure in relation to data and also maintains better maintenance and cost, aiming to be in a cloud environment that does not depend on a physical location running the API or application.
 
-# Links Uteis
-Documentação de desenvolvedores Linkedin:
+# Useful Links
+Linkedin developer documentation:
 
 https://learn.microsoft.com/en-us/linkedin/shared/api-guide/concepts?context=linkedin%2Fcontext
 
-Documentação de desenvolvedores GitHub:
+GitHub Developer Documentation:
 
 https://docs.github.com/en/rest?apiVersion=2022-11-28
 
-Documentação de desenvolvedores Firebase:
+Firebase Developer Documentation:
 
 https://firebase.google.com/docs?hl=pt-br
 
