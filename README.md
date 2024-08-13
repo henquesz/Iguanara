@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+![Logo](https://github.com/user-attachments/assets/c00aa908-d051-4a94-ab6f-1afe725231b5)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Iguanara App
+
+# Knowing the product
+Aiming at the exponential growth of developers in Brazil, we came to the conclusion that many beginner/student developers do not have a portfolio or a web resume where they can assertively demonstrate their information to their audience and recruiters. Iguanara soon emerged, an application that gathers information through GitHub and Linkedin APIs and centralizes this information in an automated way with a few clicks.
+
+# Tools Used
+Following the point of ease and simplicity, this project relies on simple dependencies such as Firebase to use Firestore as the application's NoSql database, along with Firebase Auth to gather login information from GitHub and Linkedin.
+
+With this environment, the application is secure in relation to data and also maintains better maintenance and cost, aiming to be in a cloud environment that does not depend on a physical location running the API or application.
+
+# Useful Links
+Linkedin developer documentation:
+
+https://learn.microsoft.com/en-us/linkedin/shared/api-guide/concepts?context=linkedin%2Fcontext
+
+GitHub Developer Documentation:
+
+https://docs.github.com/en/rest?apiVersion=2022-11-28
+
+Firebase Developer Documentation:
+
+https://firebase.google.com/docs?hl=pt-br
+
 
 ## Available Scripts
 
@@ -36,35 +58,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
