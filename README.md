@@ -1,4 +1,4 @@
-![Logo](https://github.com/user-attachments/assets/c00aa908-d051-4a94-ab6f-1afe725231b5)
+![3coreslogo](https://github.com/user-attachments/assets/c9a6d2e8-b24d-4115-876b-2d1c8d52fd04)
 
 # Iguanara App
 
