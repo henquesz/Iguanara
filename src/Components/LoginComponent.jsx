@@ -3,11 +3,14 @@ import { Row, Col, Button, Typography } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 
 import logo from "../img/3.png"
-import { auth, GithubAuthProvider, signInWithPopup } from '../Firebasse';
+import { auth, GithubAuthProvider, signInWithPopup, db } from '../Firebasse';
+import {doc, setDoc } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 
 const { Title, Paragraph } = Typography;
 
 const LoginComponent = () => {
+  const navigate = useNavigate();
 
   const handleGithubLogin = async () => {
     const provider = new GithubAuthProvider();
@@ -15,8 +18,23 @@ const LoginComponent = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-      console.log('Usuário logado: ', user);
+      const userDocRef = doc(db, 'users', user.uid); // Usando o uid do usuário como ID do documento
+    
+      const userData = {
+        name: user.displayName || 'N/A',
+        email: user.email || 'N/A',
+        profilePicture: user.photoURL || 'N/A',
+        createdAt: new Date(),
+      };
+  
+      console.log('Dados do usuário a serem salvos:', userData);
+  
+      await setDoc(userDocRef, userData);
+
+      sessionStorage.setItem("Token", user.accessToken);
+      sessionStorage.setItem("UserInfo", JSON.stringify(user));
       // Aqui você pode redirecionar ou salvar o usuário no estado global
+      navigate(`/user/${user.uid}`);
     } catch (error) {
       console.error('Erro ao fazer login com GitHub: ', error);
     }
@@ -73,6 +91,10 @@ const LoginComponent = () => {
           >
             Sign with GitHub
           </Button>
+          <br></br>
+          <Paragraph style={{ fontSize: '16px', textAlign: 'center', marginBottom: '40px', color:"white" }}>
+          By clicking continue, you agree to our Terms of Service and Privacy Policy.
+          </Paragraph>
         </Col>
       </Row>
     </div>

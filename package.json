@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.20.0",
     "firebase": "^10.12.5",
+    "iguariana": "file:",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "react": "^18.3.1",
