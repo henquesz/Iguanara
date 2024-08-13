@@ -101,7 +101,6 @@ const HomeComponent = () => {
         </Breadcrumb>
         <div
           style={{
-            background: "#fff",
             minHeight: 280,
             padding: "100px",
             borderRadius: "8px",
