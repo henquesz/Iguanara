@@ -11,7 +11,7 @@ import {
   Row,
   Typography,
 } from "antd";
-import logo from "../img/3.png";
+import logo from "../img/3.jpg";
 
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';

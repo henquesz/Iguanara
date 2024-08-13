@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Button, Typography } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 
-import logo from "../img/3.png"
+import logo from "../img/3.jpg"
 import { auth, GithubAuthProvider, signInWithPopup, db } from '../Firebasse';
 import {doc, setDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
@@ -18,12 +18,14 @@ const LoginComponent = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-      const userDocRef = doc(db, 'users', user.uid); // Usando o uid do usuário como ID do documento
+      console.log(user);
+      const userDocRef = doc(db, 'users', user.reloadUserInfo.screenName); // Usando o uid do usuário como ID do documento
     
       const userData = {
         name: user.displayName || 'N/A',
         email: user.email || 'N/A',
         profilePicture: user.photoURL || 'N/A',
+        indendity: user.reloadUserInfo.screenName,
         createdAt: new Date(),
       };
   
@@ -34,7 +36,7 @@ const LoginComponent = () => {
       sessionStorage.setItem("Token", user.accessToken);
       sessionStorage.setItem("UserInfo", JSON.stringify(user));
       // Aqui você pode redirecionar ou salvar o usuário no estado global
-      navigate(`/user/${user.uid}`);
+      navigate(`/user/${user.reloadUserInfo.screenName}`);
     } catch (error) {
       console.error('Erro ao fazer login com GitHub: ', error);
     }
