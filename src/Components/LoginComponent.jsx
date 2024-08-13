@@ -35,7 +35,7 @@ const LoginComponent = () => {
 
       sessionStorage.setItem("Token", user.accessToken);
       sessionStorage.setItem("UserInfo", JSON.stringify(user));
-      // Aqui você pode redirecionar ou salvar o usuário no estado global
+      // Aqui você pode redirecionar ou salvar o usuário no estado global.
       navigate(`/user/${user.reloadUserInfo.screenName}`);
     } catch (error) {
       console.error('Erro ao fazer login com GitHub: ', error);

@@ -53,7 +53,7 @@ const HomeComponent = () => {
         }, [id]);
       
         if (!userData) {
-          return <p>Carregando...</p>;
+          return null;
         }
 
     const objetoRecuperado = sessionStorage.getItem("UserInfo");
@@ -90,15 +90,6 @@ const HomeComponent = () => {
           padding: "0 48px",
         }}
       >
-        <Breadcrumb
-          style={{
-            margin: "16px 0",
-          }}
-        >
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
         <div
           style={{
             minHeight: 280,
