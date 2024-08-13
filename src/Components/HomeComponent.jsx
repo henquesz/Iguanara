@@ -103,7 +103,7 @@ const HomeComponent = () => {
           style={{
             background: "#fff",
             minHeight: 280,
-            padding: 24,
+            padding: "100px",
             borderRadius: "8px",
           }}
         >
