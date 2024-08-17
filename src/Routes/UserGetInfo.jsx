@@ -4,7 +4,7 @@ import { auth, GithubAuthProvider, signInWithPopup, db } from "../Firebasse";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-const GITHUB_TOKEN = "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";
+const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
 const getGithubUserInfo = async (id) => {
   try {
