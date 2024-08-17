@@ -7,40 +7,14 @@ import { auth, GithubAuthProvider, signInWithPopup, db } from '../Firebasse';
 import {doc, setDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
+import { useGithubLogin } from '../Routes/LoginRoute';
+
 const { Title, Paragraph } = Typography;
 
 const LoginComponent = () => {
   const navigate = useNavigate();
 
-  const handleGithubLogin = async () => {
-    const provider = new GithubAuthProvider();
-
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      console.log(user);
-      const userDocRef = doc(db, 'users', user.reloadUserInfo.screenName); // Usando o uid do usuário como ID do documento
-    
-      const userData = {
-        name: user.displayName || 'N/A',
-        email: user.email || 'N/A',
-        profilePicture: user.photoURL || 'N/A',
-        indendity: user.reloadUserInfo.screenName,
-        createdAt: new Date(),
-      };
-  
-      console.log('Dados do usuário a serem salvos:', userData);
-  
-      await setDoc(userDocRef, userData);
-
-      sessionStorage.setItem("Token", user.accessToken);
-      sessionStorage.setItem("UserInfo", JSON.stringify(user));
-      // Aqui você pode redirecionar ou salvar o usuário no estado global.
-      navigate(`/user/${user.reloadUserInfo.screenName}`);
-    } catch (error) {
-      console.error('Erro ao fazer login com GitHub: ', error);
-    }
-  };
+  const handleGithubLogin = useGithubLogin();
 
   return (
     <div style={{ height: '100vh' }}>

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #242429 !important;
 }
 
 code {
@@ -13,17 +14,47 @@ code {
 }
 
 .ant-layout-header{
-  background-color: #0a0a0a !important;
+  background-color: #18181b !important;
 }
 
 .ant-menu-overflow{
-  background-color: #0a0a0a !important;
+  background-color: #18181b !important;
 }
 
 .ant-menu{
-  background-color: #0a0a0a !important;
+  background-color: #18181b !important;
 }
 
 .ant-menu-item-selected{
-  background-color: blueviolet !important;
+  background-color: #18181b !important;
+}
+
+.ant-layout{
+  background-color: #18181b !important;
+}
+.ant-layout-footer{
+  background-color: #18181b !important;
+  color: grey
+}
+
+.ant-card-body{
+  background-color: #19191d !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+.ant-card{
+  background-color: #19191d !important;
+  border: none !important;
+  color: white !important
+}
+
+.ant-segmented-group{
+  background-color: #19191d !important;
+  color: grey;
+}
+
+.ant-segmented{
+  background-color: #19191d !important;
 }
